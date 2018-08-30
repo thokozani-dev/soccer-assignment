@@ -1,7 +1,7 @@
 
 '''
     TeamOutcome is just a utility class that utilizes TeamScore to determine the winner 
-    between the two competing teams. This will probably be listed in a "util" class but for 
+    between the two competing teams. This will probably be listed in a "util" package but for 
     simplicity sake we kept it in the root folder
 '''
 

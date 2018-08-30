@@ -13,10 +13,8 @@ def printRankings( filePath = None, testMode = False ):
         
     # Formatting slashes
     filePath    = str( filePath ).replace( '\\', '/' )
-
-    # \Users\refreshdevelopment\Documents\scores.txt
-    # \Users\refreshdevelopment\Documents\out-scores.txt
-    # \Users\refreshdevelopment\Documents\empty.txt
+    filePath    = filePath.rstrip( '/' )
+    
     
     # Array for reading the file line by line
     lines   = []
@@ -91,9 +89,9 @@ def printRankings( filePath = None, testMode = False ):
                 testString  = ''
                 for rank in rankings:
                     if testMode == False:
-                        print( str ( index ) + '. ' + rank.getTeamName() + ' ' + str( rank.getTeamPoints() ) + ' pts' )
+                        print( str( rank.getTeamRank() ) + '. ' + rank.getTeamName() + ' ' + str( rank.getTeamPoints() ) + ' pts' )
                     else:
-                        testString += str ( index ) + '. ' + rank.getTeamName() + ' ' + str( rank.getTeamPoints() ) + ' pts\n'
+                        testString += str( rank.getTeamRank() ) + '. ' + rank.getTeamName() + ' ' + str( rank.getTeamPoints() ) + ' pts\n'
                     
                     index += 1
                     

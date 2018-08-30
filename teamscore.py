@@ -1,4 +1,8 @@
 
+'''
+    This class will be used to represent teams from the data source.
+'''
+
 class TeamScore:
     
     __name      = ''    # The name of the team

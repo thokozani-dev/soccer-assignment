@@ -12,7 +12,7 @@ class MainUnitTest( unittest.TestCase ):
     
     # This test assumes everything is fine and ranking table can be produced
     def testRankingsFine( self ):
-        self.assertEqual( printRankings( 'scores.txt', self.__testmode ), "1. Tarantulas 6 pts\n2. Lions 5 pts\n3. Snakes 1 pts\n4. FC Awesome 1 pts\n5. Grouches 0 pts" )
+        self.assertEqual( printRankings( 'scores.txt', self.__testmode ), "1. Tarantulas 6 pts\n2. Lions 5 pts\n3. Snakes 1 pts\n3. FC Awesome 1 pts\n4. Grouches 0 pts" )
         
         
     # This test assumes the file cannot be found
