@@ -9,7 +9,10 @@ def printRankings( filePath = None, testMode = False ):
     
     # If the file path is not provided you will be prompted for it
     if filePath == None:
-        filePath    = raw_input( 'Please enter the file path containing scores in your computer: ' )
+        try:
+            filePath    = raw_input( 'Please enter the file path containing scores in your computer: ' )
+        except:
+            filePath    = input( 'Please enter the file path containing scores in your computer: ' )
         
     # Formatting slashes
     filePath    = str( filePath ).replace( '\\', '/' )
