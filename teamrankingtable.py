@@ -57,7 +57,10 @@ class TeamRankingTable:
                     teamRanking.setTeamRank( rank )
                     
             rank += 1
-            
+        
+        # Now lets sort based on rank and name. If 2 teams share the same rank then the next sort criteria
+        # is alphabetical in ascending order.    
+        self.__teamRankings.sort( key=lambda team: ( team.getTeamRank(), team.getTeamName() ), reverse=False )
         
         return self.__teamRankings
     
